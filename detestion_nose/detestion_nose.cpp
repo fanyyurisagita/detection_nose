@@ -28,7 +28,7 @@ int num_frames;
 clock_t start;	// variabel waktu
 
 
-
+//chandra wn
 CvHaarClassifierCascade * pCascade = 0;		// the idung detector
 CvMemStorage * pStorage = 0;				// memory for detector to use
 CvSeq * idung;								// memory-access interidung	
