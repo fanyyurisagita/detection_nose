@@ -39,7 +39,7 @@ void detect_idung(IplImage * frame, CvSeq * idung);
 
 int main(int argc, char** argv)
 {
-	cout << "test" << endl;
+	cout << "Waktu untuk Komputasi" << endl; //indri
 	CvCapture *capture = cvCaptureFromCAM(0);
 
 	pStorage = cvCreateMemStorage(0);
@@ -83,7 +83,7 @@ int main(int argc, char** argv)
 
 		cvShowImage(DISPLAY_WINDOW, frame);
 		
-		cout << "waktu Komputasi: " << (clock() - start) / (double) CLOCK_PER_SECOND << "\t ms per second" <<endl;
+		cout << "waktu Komputasi: " << (clock() - start) / (double) CLOCK_PER_SEC << "\t ms per second" <<endl;
 		IplImage * hist = cvCreateImage(cvGetSize(frame),8,1);
 		cvCvtColor( frame, hist, CV_BGR2GRAY );
 		cvEqualizeHist(hist, hist);
@@ -154,4 +154,4 @@ void detect_idung(IplImage * frame, CvSeq * idung)
 	cvPutText(frame,fpsnum,cvPoint(500,50), &font, cvScalar(0, 255, 0, 0));
 
 }
-}
+
